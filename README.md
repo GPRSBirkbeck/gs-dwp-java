@@ -2,7 +2,7 @@
 My application for online recruitment test
 
 ## Installation
-Download these files, and then run in the IDE of your choice (Intellij in my case).
+Download this repository, and then run in the IDE of your choice (Intellij in my case).
 Then head over to http://localhost:8080/closeToCity
 
 ## Approach to the problem
