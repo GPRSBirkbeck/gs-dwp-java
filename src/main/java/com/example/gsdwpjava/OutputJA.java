@@ -6,10 +6,10 @@ public class OutputJA {
 
     private final String PeopleWithin50Miles;
 
-    public OutputJA(String contentArray) {
-        this.PeopleWithin50Miles = contentArray;
+    public OutputJA(String PeopleWithin50Miles) {
+        this.PeopleWithin50Miles = PeopleWithin50Miles;
     }
-    public String getContentArray() {
+    public String getPeopleWithin50Miles() {
         return PeopleWithin50Miles;
     }
 

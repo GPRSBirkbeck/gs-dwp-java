@@ -33,15 +33,8 @@ public class LondonController {
     JSONArray finalArray = DuplicatesClass.addUsersPostDuplication(londonUserJA, postRemovalArray);
     String finalArrayString = finalArray.toString();
 
-
-    @GetMapping("/greeting")
-    public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
-        return new Greeting(counter.incrementAndGet(), String.format(template, name));
-    }
-
     @GetMapping("/closeToCity")
     public OutputJA myOutputJA(@RequestParam(value = "cityname", defaultValue = "London") String cityname) {
-        String myStringArray = myArray.toString();
        return new OutputJA(String.format(finalArrayString, cityname));
     }
 }
