@@ -4,13 +4,13 @@ import org.json.simple.JSONArray;
 
 public class OutputJA {
 
-    private final String contentArray;
+    private final String PeopleWithin50Miles;
 
     public OutputJA(String contentArray) {
-        this.contentArray = contentArray;
+        this.PeopleWithin50Miles = contentArray;
     }
     public String getContentArray() {
-        return contentArray;
+        return PeopleWithin50Miles;
     }
 
 }
