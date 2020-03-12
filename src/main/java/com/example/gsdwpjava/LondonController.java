@@ -30,10 +30,9 @@ public class LondonController {
     JSONArray additionJA = DistanceClass.closeToLondon(allUserJA);
     JSONArray postRemovalArray = DuplicatesClass.removeDuplicates(londonUserJA, additionJA);
     JSONArray finalArray = DuplicatesClass.addUsersPostDuplication(londonUserJA, postRemovalArray);
-    String finalArrayString = finalArray.toString();
 
     @GetMapping("/closeToCity")
     public OutputJA myOutputJA(@RequestParam(value = "cityname", defaultValue = "London") String cityname) {
-       return new OutputJA(String.format(finalArrayString, cityname));
+       return new OutputJA(finalArray);
     }
 }
