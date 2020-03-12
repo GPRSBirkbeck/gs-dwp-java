@@ -1,7 +1,5 @@
 package com.example.gsdwpjava;
 
-import org.json.simple.JSONArray;
-
 public class OutputJA {
 
     private final String PeopleWithin50Miles;

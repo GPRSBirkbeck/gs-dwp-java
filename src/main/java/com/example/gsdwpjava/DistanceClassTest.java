@@ -2,8 +2,6 @@ package com.example.gsdwpjava;
 
 import org.json.simple.JSONObject;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DistanceClassTest {
@@ -17,7 +15,6 @@ class DistanceClassTest {
         double londonLat = 53.31861111111111;
         double londonLong = -1.6997222222222223;
 
-
         double earthRadiusKilometres = 6371;
         double earthRadiusMiles = 3963;
 
@@ -26,11 +23,5 @@ class DistanceClassTest {
         testObject.put("longitude", -1.7297222222222221);
 
             assertEquals(Math.round(DistanceClass.haversineDistance(testObject, earthRadiusKilometres,londonLat,londonLong)*1000)/1000,Math.round(2.0043678382716137*1000)/1000);
-
-
     }
-    /**
-     * to a test to check whether all users are within one globe's distance from london. If they are not, the formula is broken.
-     */
-
 }

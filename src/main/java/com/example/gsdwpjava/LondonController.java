@@ -24,7 +24,6 @@ public class LondonController {
     JSONArray londonUserJA = ApiClass.getDataFromAPI(londonUsers);
     /**
      * upon testing several of the results, not only can users say they live in London and live elsewhere
-     *
      * they can also live in other Londons, for example Tiffi Colberston (id = 688).
      * therefore I want to add users from our general allUser array to my LondonUsers Array
      */

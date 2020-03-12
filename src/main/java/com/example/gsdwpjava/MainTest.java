@@ -9,9 +9,4 @@ class MainTest {
     public void mainTest(){
 
     }
-
-
-
-
-
 }

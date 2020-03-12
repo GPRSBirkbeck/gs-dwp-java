@@ -5,12 +5,9 @@ import org.json.simple.JSONObject;
 
 public class DistanceClass {
 
-
     public static double haversineDistance(JSONObject inputUser, double distanceUnit, double londonLatitude, double londonLongitude){
         JSONObject currentJo = inputUser;
         double earthRadiusKilometers = distanceUnit;
-
-
         double ldnlatitude = londonLatitude;
         double ldnLongitude = londonLongitude;
         double currentLat = Double.parseDouble(currentJo.get("latitude").toString());
@@ -35,7 +32,6 @@ public class DistanceClass {
         double deltaLong = (londonLongRadian-currentLongRadian);
 
         double distanceToLondon = earthRadiusKilometers* Math.acos((Math.sin(currentLatRadian)*Math.sin(londonLatRadian))+Math.cos(currentLatRadian)*Math.cos(londonLatRadian)*Math.cos(deltaLong));
-
         return distanceToLondon;
     }
 
@@ -44,7 +40,6 @@ public class DistanceClass {
      * for this fixed point, I have created a variable, and I compare the distance between that variable and our LatLeng
      */
     public static JSONArray closeToLondon(JSONArray inputJA){
-
         double earthRadiusKilometres = 6371;
         double earthRadiusMiles = 3963;
         double londonLatitude = 51.5074;

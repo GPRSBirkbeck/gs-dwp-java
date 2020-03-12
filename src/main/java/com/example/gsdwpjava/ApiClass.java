@@ -2,8 +2,6 @@ package com.example.gsdwpjava;
 
 import org.json.simple.JSONArray;
 import org.json.simple.parser.*;
-
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,7 +9,6 @@ import java.io.Reader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-
 
 public class ApiClass {
 
@@ -22,15 +19,10 @@ public class ApiClass {
 
         //below I am using java.net library to make a HTTP request for the data from the API.
         try{
-
             URL inboundURL = new URL(myURL);
-
             HttpURLConnection myConnection = (HttpURLConnection) inboundURL.openConnection();
-
-
             //here I set the request method to get.
             myConnection.setRequestMethod("GET");
-
             //i need to set timeout values below:
             //these values both represent ten seconds
             myConnection.setConnectTimeout(10000);
@@ -38,7 +30,6 @@ public class ApiClass {
 
             //the response code for swagger should be 200 if happy:
             int responseStatus = myConnection.getResponseCode();
-
             Reader streamReader = null;
 
             //now let's get the response of the request, and place in a string to be printed
@@ -51,12 +42,10 @@ public class ApiClass {
                 content.append(inputText);
             }
             inputStuff.close();
-
             myConnection.disconnect();
 
             Object holderObject = new JSONParser().parse(String.valueOf(content));
             myExportJo = (JSONArray) holderObject;
-
             return myExportJo;
         }
         catch (MalformedURLException inbURL){
@@ -68,9 +57,6 @@ public class ApiClass {
             e.printStackTrace();
         }
         return myExportJo;
-
     }
-
-
 }
 
